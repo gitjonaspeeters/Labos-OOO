@@ -1,0 +1,2 @@
+public class Labo1 {
+}
