@@ -1,3 +1,4 @@
+package domain;
 
 import java.util.ArrayList;
 
@@ -17,49 +18,26 @@ public class Shop {
 		productIds = new ArrayList<String>();
 	}
 
-	public double getPrice(int productidx, int days) {
-		double price = 0;
-		if(productTypes.get(productidx).equals("M")){ 
-			price = 5;
-			int daysLeft = days - 3;
-			if (daysLeft > 0) {
-				price += (daysLeft * 2);
-			}
-		} else if(productTypes.get(productidx).equals("G")){ 
-			price = days * 3;
-		}
-		return price;
+	public double getPrice(String id, int days) {
+		return 0;
 	}		
 
-	public static void main(String[] args) {
-		Shop shop = new Shop();
 
-		String menu = "1. Add product\n2. Show product\n3. Show rental price\n\n0. Quit";
-		int choice = -1;
-		while (choice != 0) {
-			String choiceString = JOptionPane.showInputDialog(menu);
-			choice = Integer.parseInt(choiceString);
-			if (choice == 1) {
-				addProduct(shop);
-			} else if (choice == 2) {
-				showProduct(shop);
-			} else if (choice == 3){
-				showPrice(shop);
-			}
-		}
-	}
 	
-	public static void addProduct(Shop shop) {
+	public static void addProduct() {
 		String title = JOptionPane.showInputDialog("Enter the title:");
 		String id = JOptionPane.showInputDialog("Enter the id:");
 		String type = JOptionPane.showInputDialog("Enter the type (M for movie/G for game):");
-		
-		shop.productTitles.add(title);
-		shop.productIds.add(id);
-		shop.productTypes.add(type);
+		if (type.equals("M")){
+			db.add(new Movie(title,id));
+		}else if (type.equals("G")) {
+			db.add(new Game(title,id));
+		}else {
+			throw new IllegalArgumentException("Moet M of G zijn");
+		}
 	}
 	
-	public static void showProduct(Shop shop){
+	public static void showProduct(){
 		String id = JOptionPane.showInputDialog("Enter the id:");
 		int idx = -1;
 		boolean found = false;
