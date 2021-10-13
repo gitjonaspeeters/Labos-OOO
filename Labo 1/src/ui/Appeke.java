@@ -7,6 +7,7 @@ import javax.swing.*;
 import static domain.Shop.*;
 
 public class Appeke {
+    /*
     public static void main(String[] args) {
         Shop shop = new Shop();
 
@@ -24,4 +25,6 @@ public class Appeke {
             }
         }
     }
+
+     */
 }

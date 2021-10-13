@@ -30,7 +30,7 @@ public class Ceasarcijfer implements Strategy{
         for (int i = 0; i < t.length; i++) {
             for (int j = 0; j <alphabet.length; j++) {
                 if (t[i]==alphabet[j]){
-                    if (j+3>26){
+                    if (j-3<0){
                         out[i]=alphabet[j-3+26];
                     }else {
                         out[i]=alphabet[j-3];

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-
 public class Shop {
 	private static ProductDatabase db;
 
+/*
 
 	public Shop(){
 	}
@@ -65,4 +65,6 @@ public class Shop {
 			JOptionPane.showMessageDialog(null, shop.getPrice(idx,days));
 		}
 	}
+	*/
+
 }
