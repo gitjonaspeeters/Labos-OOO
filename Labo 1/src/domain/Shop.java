@@ -6,16 +6,10 @@ import javax.swing.JOptionPane;
 
 
 public class Shop {
-	
-	private ArrayList<String> productTitles;
-	private ArrayList<String> productTypes;
-	private ArrayList<String> productIds;
-	
-	public Shop()
-	{
-		productTitles = new ArrayList<String>();
-		productTypes = new ArrayList<String>();
-		productIds = new ArrayList<String>();
+	private static ProductDatabase db;
+
+
+	public Shop(){
 	}
 
 	public double getPrice(String id, int days) {
