@@ -18,7 +18,7 @@ public class Appeke {
             if (choice == 1) {
                 addProduct();
             } else if (choice == 2) {
-                showProduct(shop);
+                showProdut(shop);
             } else if (choice == 3){
                 showPrice(shop);
             }
