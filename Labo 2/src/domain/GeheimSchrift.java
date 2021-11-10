@@ -1,6 +1,6 @@
 package domain;
 
-public abstract class GeheimSchrift {
+public class GeheimSchrift {
     private String tekst;
 
     public GeheimSchrift(String tekst) {
